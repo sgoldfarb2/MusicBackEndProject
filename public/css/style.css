@@ -1,0 +1,22 @@
+.mainphoto {
+  height: 500px;
+}
+
+.background-image {
+  width: 100%;
+height: 600px;
+  background-image: url('/images/abstract-painting-art-artistic-1927573.jpg');
+background-size: 100% 100%;
+
+
+
+}
+
+nav{
+  background-color: black;
+}
+
+.black{
+  background-color: black;
+  width: 100%;
+}
