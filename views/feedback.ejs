@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Imagine Dragons</title>
+  <title>Title</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -14,6 +14,9 @@
 </head>
 
 <body>
+
+
+
   <div class="header d-flex justify-content-center black">
 
     <img src="/images/logo-name.png" alt="">
@@ -31,55 +34,46 @@
       <div class="navbar-nav">
         <a class="nav-item nav-link active" href="/">Home </a>
         <a class="nav-item nav-link" href="/albums">Albums</a>
-        <a class="nav-item nav-link" href="#">Chat</a>
+        <a class="nav-item nav-link" href="/albums">Chat</a>
         <a class="nav-item nav-link" href="/feedback">Feedback</a>
       </div>
     </div>
 
   </nav>
+  <div class="row" style="margin: 50px">
+
+    <div class="left-side d-flex col-6 justify-content-start">
+      <form id="feedback-form">
+        <div class="form-group"></div>
+        Name <br>
+        <input type="text" id="name" name="name" placeholder="name"><br>
+        Email <br>
+        <input type="text" id="email" placeholder="email" name="email"> <br>
+        Message <br>
+        <textarea name="textarea" id="message" cols="30" rows="5" placeholder="Enter your text here..."></textarea>
+        <br>
+        <br>
 
 
-  <% allAlbums.forEach(albumObj => { %>
+        <button type="submit">Submit</button>
 
-
-  <div class="container d-flex justify-content-start" style="margin: 20px;">
-    <div class="row">
-      <div class="col-5">
-
-
-        <img src="/images/<%= albumObj.artwork%>" alt="Picture of Album" style="width: 100%; margin: 20px;">
-
-
-
-      </div>
-      <div class="col-2" style="margin: 20px;">
-
-
-        <p>Release Date: <%= albumObj.releaseDate %> </p>
-        Maybe some other content here, like spotify/itunes connect to album
-
-      </div>
-
-      <div class="col-4" style="margin: 20px;">
-        <p>Song Titles:</p>
-        <ol>
-          <% albumObj.songs.forEach(song => { %>
-          <li><%= song %></li>
-          <% }) %>
-        </ol>
-
-
-      </div>
+      </form>
     </div>
 
+    <div class="right-side d-flex col-6 justify-content-center" style="border: black solid 1px">
+      <h2>Comments:</h2>
+
+      <div id="comments" class="">
+
+      </div>
+
+
+
+
+
+    </div>
 
   </div>
-  <% }) %>
-
-
-
-
-
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -91,6 +85,9 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="/js/feedback.js"></script>
 </body>
 
 </html>
